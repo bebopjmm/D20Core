@@ -8,20 +8,9 @@
 
 import Foundation
 
-open class AdjustableValue {
-    var base : Int
-    var current : Int
-    
-    public init (baseValue : Int) {
-        base = baseValue
-        current = baseValue
-    }
-
-    public func baseValue() -> Int {
-        return base
-    }
-    
-    public func currentValue() -> Int {
-        return current
-    }
+protocol AdjustableValue {
+    var baseValue : Int {get}
+    var currentValue : Int {get set}
+    func recalculateCurrent()
 }
+
