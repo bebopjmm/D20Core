@@ -11,6 +11,10 @@ import D20Core
 
 class TestListener : AdjustmentListener {
     var trackedModifiers: Int = 0
+
+    func adjustmentChanged(adjustment: Adjustment, modifierDelta: Int) {
+        trackedModifiers += modifierDelta
+    }
 }
 
 class AdjustmentListenerTests : XCTestCase {

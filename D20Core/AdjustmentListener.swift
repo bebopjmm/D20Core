@@ -12,9 +12,3 @@ protocol AdjustmentListener {
     var trackedModifiers: Int {get set}
     mutating func adjustmentChanged(adjustment: Adjustment, modifierDelta: Int)
 }
-
-extension AdjustmentListener {
-    mutating func adjustmentChanged(adjustment: Adjustment, modifierDelta: Int) {
-        trackedModifiers += modifierDelta
-    }
-}

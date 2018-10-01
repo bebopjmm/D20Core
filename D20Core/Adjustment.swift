@@ -12,7 +12,7 @@ enum AdjustmentCategory {
     case inherent, equipment, effect
 }
 
-struct Adjustment {
+struct Adjustment : Hashable {
     var value : Int
     let category : AdjustmentCategory
     let name : String

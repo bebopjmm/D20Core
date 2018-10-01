@@ -11,6 +11,7 @@ import Foundation
 protocol AdjustableValue {
     var baseValue : Int {get}
     var currentValue : Int {get set}
+    var adjustments : Set<Adjustment> {get}
     func recalculateCurrent()
 }
 
