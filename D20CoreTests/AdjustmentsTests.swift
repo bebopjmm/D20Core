@@ -17,7 +17,12 @@ class TestListener : AdjustmentListener {
     }
 }
 
-class AdjustmentListenerTests : XCTestCase {
+class AdjustmentsTests : XCTestCase {
+
+    func testAdjustmentInitialization() {
+        let testAdjustment = Adjustment(name: "testAdjustment", modifierValue: 5, category: AdjustmentCategory.inherent)
+        XCTAssertTrue(testAdjustment.value == 5 , "adjustment value base equals initialized value")
+    }
 
     func testInitialization() {
         let listener : TestListener = TestListener()

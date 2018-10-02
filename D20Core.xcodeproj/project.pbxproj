@@ -8,12 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		031638B0216178AD00F25FAB /* AdjustableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853F2A20EF07E4000B19A6 /* AdjustableValue.swift */; };
-		031638B22161791A00F25FAB /* AdjustmentListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031638B12161791A00F25FAB /* AdjustmentListener.swift */; };
-		031638B32161791A00F25FAB /* AdjustmentListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031638B12161791A00F25FAB /* AdjustmentListener.swift */; };
-		031638B621617B8300F25FAB /* AdjustmentListenerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031638B421617B8300F25FAB /* AdjustmentListenerTest.swift */; };
-		432368262161134500CAF230 /* Adjustment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432368252161134500CAF230 /* Adjustment.swift */; };
-		432368272161134500CAF230 /* Adjustment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432368252161134500CAF230 /* Adjustment.swift */; };
-		432368292161158E00CAF230 /* AdjustmentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432368282161158E00CAF230 /* AdjustmentTest.swift */; };
+		031638B621617B8300F25FAB /* AdjustmentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031638B421617B8300F25FAB /* AdjustmentsTests.swift */; };
+		432368262161134500CAF230 /* Adjustments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432368252161134500CAF230 /* Adjustments.swift */; };
+		432368272161134500CAF230 /* Adjustments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432368252161134500CAF230 /* Adjustments.swift */; };
 		43853F1520EE6FE4000B19A6 /* D20Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43853F0B20EE6FE4000B19A6 /* D20Core.framework */; };
 		43853F1A20EE6FE4000B19A6 /* D20CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853F1920EE6FE4000B19A6 /* D20CoreTests.swift */; };
 		43853F1C20EE6FE4000B19A6 /* D20Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 43853F0E20EE6FE4000B19A6 /* D20Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -34,10 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		031638B12161791A00F25FAB /* AdjustmentListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentListener.swift; sourceTree = "<group>"; };
-		031638B421617B8300F25FAB /* AdjustmentListenerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentListenerTest.swift; sourceTree = "<group>"; };
-		432368252161134500CAF230 /* Adjustment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adjustment.swift; sourceTree = "<group>"; };
-		432368282161158E00CAF230 /* AdjustmentTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentTest.swift; sourceTree = "<group>"; };
+		031638B421617B8300F25FAB /* AdjustmentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustmentsTests.swift; sourceTree = "<group>"; };
+		432368252161134500CAF230 /* Adjustments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adjustments.swift; sourceTree = "<group>"; };
 		43853F0B20EE6FE4000B19A6 /* D20Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = D20Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43853F0E20EE6FE4000B19A6 /* D20Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = D20Core.h; sourceTree = "<group>"; };
 		43853F0F20EE6FE4000B19A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,8 +89,7 @@
 				43853F0E20EE6FE4000B19A6 /* D20Core.h */,
 				43853F0F20EE6FE4000B19A6 /* Info.plist */,
 				43853F2A20EF07E4000B19A6 /* AdjustableValue.swift */,
-				432368252161134500CAF230 /* Adjustment.swift */,
-				031638B12161791A00F25FAB /* AdjustmentListener.swift */,
+				432368252161134500CAF230 /* Adjustments.swift */,
 			);
 			path = D20Core;
 			sourceTree = "<group>";
@@ -106,8 +100,7 @@
 				43853F1920EE6FE4000B19A6 /* D20CoreTests.swift */,
 				43853F1B20EE6FE4000B19A6 /* Info.plist */,
 				43853F2C20EFBEA9000B19A6 /* AdjustableValueTest.swift */,
-				432368282161158E00CAF230 /* AdjustmentTest.swift */,
-				031638B421617B8300F25FAB /* AdjustmentListenerTest.swift */,
+				031638B421617B8300F25FAB /* AdjustmentsTests.swift */,
 			);
 			path = D20CoreTests;
 			sourceTree = "<group>";
@@ -232,8 +225,7 @@
 			files = (
 				43853F2920EE9545000B19A6 /* Ability.swift in Sources */,
 				43853F2B20EF07E4000B19A6 /* AdjustableValue.swift in Sources */,
-				031638B22161791A00F25FAB /* AdjustmentListener.swift in Sources */,
-				432368262161134500CAF230 /* Adjustment.swift in Sources */,
+				432368262161134500CAF230 /* Adjustments.swift in Sources */,
 				43853F2620EE703A000B19A6 /* Actor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,10 +235,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				43853F2D20EFBEA9000B19A6 /* AdjustableValueTest.swift in Sources */,
-				432368272161134500CAF230 /* Adjustment.swift in Sources */,
-				031638B32161791A00F25FAB /* AdjustmentListener.swift in Sources */,
-				031638B621617B8300F25FAB /* AdjustmentListenerTest.swift in Sources */,
-				432368292161158E00CAF230 /* AdjustmentTest.swift in Sources */,
+				432368272161134500CAF230 /* Adjustments.swift in Sources */,
+				031638B621617B8300F25FAB /* AdjustmentsTests.swift in Sources */,
 				43853F1A20EE6FE4000B19A6 /* D20CoreTests.swift in Sources */,
 				031638B0216178AD00F25FAB /* AdjustableValue.swift in Sources */,
 			);

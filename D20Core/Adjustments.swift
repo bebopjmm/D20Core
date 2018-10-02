@@ -12,7 +12,8 @@ enum AdjustmentCategory {
     case inherent, equipment, effect
 }
 
-struct Adjustment : Hashable {
+class Adjustment : Hashable {
+    
     var value : Int
     let category : AdjustmentCategory
     let name : String
@@ -21,5 +22,20 @@ struct Adjustment : Hashable {
         self.name = name
         value = modifierValue
         self.category = category
+        
     }
+    
+    static func == (lhs: Adjustment, rhs: Adjustment) -> Bool {
+        return lhs.name == rhs.name && lhs.category == rhs.category
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+        hasher.combine(category)
+    }
+}
+
+protocol AdjustmentListener {
+    var trackedModifiers: Int {get set}
+    mutating func adjustmentChanged(adjustment: Adjustment, modifierDelta: Int)
 }
