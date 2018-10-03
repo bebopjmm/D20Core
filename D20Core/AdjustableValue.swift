@@ -8,10 +8,22 @@
 
 import Foundation
 
-protocol AdjustableValue {
-    var baseValue : Int {get}
-    var currentValue : Int {get set}
-    var adjustments : Set<Adjustment> {get}
-    func recalculateCurrent()
+class AdjustableValue {
+    private var baseValue : Int
+    var currentValue : Int
+    var modifiers = Set<Modifier>()
+
+    init(baseValue: Int) {
+        self.baseValue = baseValue
+        currentValue = baseValue
+    }
+
+    func recalculateCurrent() {
+        currentValue = baseValue
+        for modifier in modifiers {
+            currentValue += modifier.value
+        }
+    }
+    
 }
 

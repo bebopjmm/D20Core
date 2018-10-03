@@ -12,16 +12,16 @@ protocol Disposable {
     func dispose()
 }
 
-protocol AdjustmentListener {
-    func adjustmentChanged(adjustment: Adjustment, modifierDelta: Int)
-    func apply(adjustment: Adjustment)
+protocol ModifierListener {
+    func modifierChanged(modifier: Modifier, valueDelta: Int)
+    func apply(modifier: Modifier)
 }
 
-enum AdjustmentCategory {
+enum ModifierCategory {
     case inherent, equipment, effect
 }
 
-class Adjustment : Hashable {
+class Modifier : Hashable {
     
     var value: Int = 0 {
         willSet(newValue) {
@@ -34,11 +34,11 @@ class Adjustment : Hashable {
             }
         }
     }
-    let category : AdjustmentCategory
+    let category : ModifierCategory
     let name : String
-    fileprivate var subscribers = [AdjustmentEventHandler]()
+    fileprivate var subscribers = [ModifierChangeHandler]()
     
-    init(name : String, modifierValue : Int, category : AdjustmentCategory) {
+    init(name : String, modifierValue : Int, category : ModifierCategory) {
         self.name = name
         value = modifierValue
         self.category = category
@@ -47,18 +47,18 @@ class Adjustment : Hashable {
     private func notifyOfChange(delta: Int) {
         print("Notify of change on \(self.name) with delta = \(delta) to subscribers [\(subscribers.count)]")
         for handler in subscribers {
-            handler.handle(adjustment: self, modifierDelta: delta)
+            handler.handle(modifier: self, valueDelta: delta)
         }
     }
     
-    func subscribe(listener: AdjustmentListener) -> Disposable {
-        let handler = AdjustmentEventHandler(adjustment: self, handler: listener)
+    func subscribe(listener: ModifierListener) -> Disposable {
+        let handler = ModifierChangeHandler(modifier: self, handler: listener)
         subscribers.append(handler)
-        listener.apply(adjustment: self)
+        listener.apply(modifier: self)
         return handler
     }
     
-    static func == (lhs: Adjustment, rhs: Adjustment) -> Bool {
+    static func == (lhs: Modifier, rhs: Modifier) -> Bool {
         return lhs.name == rhs.name && lhs.category == rhs.category
     }
     
@@ -68,21 +68,21 @@ class Adjustment : Hashable {
     }
 }
 
-private class AdjustmentEventHandler : Disposable {
-    let adjustment: Adjustment
-    let handler: AdjustmentListener
+private class ModifierChangeHandler : Disposable {
+    let modifier: Modifier
+    let handler: ModifierListener
     
-    init(adjustment: Adjustment, handler: AdjustmentListener) {
-        self.adjustment = adjustment
+    init(modifier: Modifier, handler: ModifierListener) {
+        self.modifier = modifier
         self.handler = handler
     }
     
     func dispose() {
-        adjustment.subscribers = adjustment.subscribers.filter { $0 !== self }
+        modifier.subscribers = modifier.subscribers.filter { $0 !== self }
     }
     
-    func handle(adjustment: Adjustment, modifierDelta: Int) {
-        handler.adjustmentChanged(adjustment: adjustment, modifierDelta: modifierDelta)
+    func handle(modifier: Modifier, valueDelta: Int) {
+        handler.modifierChanged(modifier: modifier, valueDelta: valueDelta)
     }
 }
 
