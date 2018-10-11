@@ -9,7 +9,7 @@
 import XCTest
 import D20Core
 
-class TestValue : AdjustableValue {
+class TestValue : ModifiableValue {
 
     init() {
         super.init(baseValue: 10)
@@ -24,14 +24,14 @@ class TestValue : AdjustableValue {
 class AdjustableValueTests : XCTestCase {
     
     func testInitialization() {
-        let adjustableValue = AdjustableValue(baseValue: 10)
-        XCTAssertTrue(adjustableValue.currentValue == 10, "adjustable current equals base following initialization")
+        let modifiableValue = ModifiableValue(baseValue: 10)
+        XCTAssertTrue(modifiableValue.currentValue == 10, "modifiable current equals base following initialization")
     }
     
     func testAddAdjustment() {
         let modifier = 5
-        let adjustableValue = TestValue()
-        adjustableValue.addModifier(newModifier: Modifier(name: "test", modifierValue: modifier, category: ModifierCategory.inherent))
-        XCTAssertTrue(adjustableValue.currentValue == 15, "adjustable current updated following modifier change and recalc")
+        let modifiableValue = TestValue()
+        modifiableValue.addModifier(newModifier: Modifier(name: "test", modifierValue: modifier, category: ModifierCategory.inherent))
+        XCTAssertTrue(modifiableValue.currentValue == 15, "modifiable current updated following modifier change and recalc")
     }
 }

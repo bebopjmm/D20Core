@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		031638B0216178AD00F25FAB /* AdjustableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853F2A20EF07E4000B19A6 /* AdjustableValue.swift */; };
+		031638B0216178AD00F25FAB /* ModifiableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853F2A20EF07E4000B19A6 /* ModifiableValue.swift */; };
 		031638B621617B8300F25FAB /* ModifiersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031638B421617B8300F25FAB /* ModifiersTests.swift */; };
 		432368262161134500CAF230 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432368252161134500CAF230 /* Modifiers.swift */; };
 		432368272161134500CAF230 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432368252161134500CAF230 /* Modifiers.swift */; };
+		436410A3216EC51700035EFB /* AbilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436410A2216EC51700035EFB /* AbilitiesTests.swift */; };
+		436410A8216F894D00035EFB /* StarfinderActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436410A7216F894D00035EFB /* StarfinderActor.swift */; };
+		436410A9216F894D00035EFB /* StarfinderActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436410A7216F894D00035EFB /* StarfinderActor.swift */; };
 		43853F1520EE6FE4000B19A6 /* D20Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43853F0B20EE6FE4000B19A6 /* D20Core.framework */; };
 		43853F1A20EE6FE4000B19A6 /* D20CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853F1920EE6FE4000B19A6 /* D20CoreTests.swift */; };
 		43853F1C20EE6FE4000B19A6 /* D20Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 43853F0E20EE6FE4000B19A6 /* D20Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43853F2620EE703A000B19A6 /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853F2520EE703A000B19A6 /* Actor.swift */; };
-		43853F2920EE9545000B19A6 /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853F2820EE9545000B19A6 /* Ability.swift */; };
-		43853F2B20EF07E4000B19A6 /* AdjustableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853F2A20EF07E4000B19A6 /* AdjustableValue.swift */; };
-		43853F2D20EFBEA9000B19A6 /* AdjustableValueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853F2C20EFBEA9000B19A6 /* AdjustableValueTest.swift */; };
+		43853F2920EE9545000B19A6 /* Abilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853F2820EE9545000B19A6 /* Abilites.swift */; };
+		43853F2B20EF07E4000B19A6 /* ModifiableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853F2A20EF07E4000B19A6 /* ModifiableValue.swift */; };
+		43853F2D20EFBEA9000B19A6 /* ModifiableValueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43853F2C20EFBEA9000B19A6 /* ModifiableValueTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,8 @@
 /* Begin PBXFileReference section */
 		031638B421617B8300F25FAB /* ModifiersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiersTests.swift; sourceTree = "<group>"; };
 		432368252161134500CAF230 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		436410A2216EC51700035EFB /* AbilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilitiesTests.swift; sourceTree = "<group>"; };
+		436410A7216F894D00035EFB /* StarfinderActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarfinderActor.swift; sourceTree = "<group>"; };
 		43853F0B20EE6FE4000B19A6 /* D20Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = D20Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43853F0E20EE6FE4000B19A6 /* D20Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = D20Core.h; sourceTree = "<group>"; };
 		43853F0F20EE6FE4000B19A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,9 +45,9 @@
 		43853F1920EE6FE4000B19A6 /* D20CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D20CoreTests.swift; sourceTree = "<group>"; };
 		43853F1B20EE6FE4000B19A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43853F2520EE703A000B19A6 /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
-		43853F2820EE9545000B19A6 /* Ability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
-		43853F2A20EF07E4000B19A6 /* AdjustableValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustableValue.swift; sourceTree = "<group>"; };
-		43853F2C20EFBEA9000B19A6 /* AdjustableValueTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustableValueTest.swift; sourceTree = "<group>"; };
+		43853F2820EE9545000B19A6 /* Abilites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Abilites.swift; sourceTree = "<group>"; };
+		43853F2A20EF07E4000B19A6 /* ModifiableValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiableValue.swift; sourceTree = "<group>"; };
+		43853F2C20EFBEA9000B19A6 /* ModifiableValueTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiableValueTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +69,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		436410A1216EC4F300035EFB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				436410A2216EC51700035EFB /* AbilitiesTests.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		436410A4216F884800035EFB /* Starfinder */ = {
+			isa = PBXGroup;
+			children = (
+				436410A6216F891600035EFB /* Entity */,
+			);
+			path = Starfinder;
+			sourceTree = "<group>";
+		};
+		436410A5216F885900035EFB /* StarfinderTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StarfinderTests;
+			sourceTree = "<group>";
+		};
+		436410A6216F891600035EFB /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				436410A7216F894D00035EFB /* StarfinderActor.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		43853F0120EE6FE4000B19A6 = {
 			isa = PBXGroup;
 			children = (
 				43853F0D20EE6FE4000B19A6 /* D20Core */,
 				43853F1820EE6FE4000B19A6 /* D20CoreTests */,
+				436410A4216F884800035EFB /* Starfinder */,
+				436410A5216F885900035EFB /* StarfinderTests */,
 				43853F0C20EE6FE4000B19A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,7 +126,7 @@
 				43853F2720EE70DC000B19A6 /* Entity */,
 				43853F0E20EE6FE4000B19A6 /* D20Core.h */,
 				43853F0F20EE6FE4000B19A6 /* Info.plist */,
-				43853F2A20EF07E4000B19A6 /* AdjustableValue.swift */,
+				43853F2A20EF07E4000B19A6 /* ModifiableValue.swift */,
 				432368252161134500CAF230 /* Modifiers.swift */,
 			);
 			path = D20Core;
@@ -97,9 +135,10 @@
 		43853F1820EE6FE4000B19A6 /* D20CoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				436410A1216EC4F300035EFB /* Entity */,
 				43853F1920EE6FE4000B19A6 /* D20CoreTests.swift */,
 				43853F1B20EE6FE4000B19A6 /* Info.plist */,
-				43853F2C20EFBEA9000B19A6 /* AdjustableValueTest.swift */,
+				43853F2C20EFBEA9000B19A6 /* ModifiableValueTest.swift */,
 				031638B421617B8300F25FAB /* ModifiersTests.swift */,
 			);
 			path = D20CoreTests;
@@ -109,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				43853F2520EE703A000B19A6 /* Actor.swift */,
-				43853F2820EE9545000B19A6 /* Ability.swift */,
+				43853F2820EE9545000B19A6 /* Abilites.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -224,8 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43853F2920EE9545000B19A6 /* Ability.swift in Sources */,
-				43853F2B20EF07E4000B19A6 /* AdjustableValue.swift in Sources */,
+				43853F2920EE9545000B19A6 /* Abilites.swift in Sources */,
+				436410A8216F894D00035EFB /* StarfinderActor.swift in Sources */,
+				43853F2B20EF07E4000B19A6 /* ModifiableValue.swift in Sources */,
 				432368262161134500CAF230 /* Modifiers.swift in Sources */,
 				43853F2620EE703A000B19A6 /* Actor.swift in Sources */,
 			);
@@ -235,11 +275,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43853F2D20EFBEA9000B19A6 /* AdjustableValueTest.swift in Sources */,
+				43853F2D20EFBEA9000B19A6 /* ModifiableValueTest.swift in Sources */,
+				436410A9216F894D00035EFB /* StarfinderActor.swift in Sources */,
 				432368272161134500CAF230 /* Modifiers.swift in Sources */,
 				031638B621617B8300F25FAB /* ModifiersTests.swift in Sources */,
 				43853F1A20EE6FE4000B19A6 /* D20CoreTests.swift in Sources */,
-				031638B0216178AD00F25FAB /* AdjustableValue.swift in Sources */,
+				436410A3216EC51700035EFB /* AbilitiesTests.swift in Sources */,
+				031638B0216178AD00F25FAB /* ModifiableValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
